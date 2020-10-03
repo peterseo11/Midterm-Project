@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Goal
   - Ghost
+  - paper
   layers:
   - Default
   - TransparentFX
