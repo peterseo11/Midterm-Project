@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
+    public AudioSource Sounds;
+    public AudioClip ghostGet;
     private void OnTriggerEnter2D(Collider2D other)
     {
         print("something entered this trigger");
@@ -12,6 +14,7 @@ public class Score : MonoBehaviour
         {
             print("Ghost entered");
             ghostScript.ghostAmount += 1;
+            Sounds.PlayOneShot(ghostGet);
             Destroy(other.gameObject);
         }
     }

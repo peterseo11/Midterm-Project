@@ -7,6 +7,7 @@ public class Brush : MonoBehaviour
     public GameObject brush;
     public GameObject stamp;
 
+
     public float maxRaycastDistance = 1000f;
 
     // Update is called once per frame

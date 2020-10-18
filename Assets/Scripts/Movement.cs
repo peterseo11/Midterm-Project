@@ -10,6 +10,8 @@ public class Movement : MonoBehaviour
     public GroundCheck2 groundCheckScript;
     public float gravityInAir;
     public Animator thisAnimator;
+    public AudioSource Sounds;
+    public AudioClip jumpSound;
 
     void Start()
     {
@@ -22,6 +24,7 @@ public class Movement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                Sounds.PlayOneShot(jumpSound);
                 thisRigidbody2D.AddForce(Vector2.up * force, ForceMode2D.Impulse);
             }
 
